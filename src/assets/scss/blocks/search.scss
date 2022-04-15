@@ -1,0 +1,17 @@
+.search {
+    width: 100%;
+    max-width: 21rem;
+    background-color: $primary;
+}
+
+.search__input {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    color: $white;
+
+
+    &::placeholder {
+        color: rgba($white,  0.4);
+    }
+}

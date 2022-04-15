@@ -397,7 +397,28 @@ body {
     overflow: hidden;
 }
 
+.nav__list {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.nav__link {
+    display: block;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1.5rem 1.1rem;
+    text-transform: uppercase;
+    transition: background-color 0.2s linear;
+}
+
+.nav__link:hover {
+    background-color: #3137c9;
+}
+
 .header {
+    display: -ms-flexbox;
+    display: flex;
     width: calc(100% - 300px);
     height: 30px;
     background-color: #444;
@@ -405,6 +426,16 @@ body {
     top: 0;
     right: 0;
     z-index: 1000;
+}
+
+.header__left {
+    width: 60%;
+}
+
+.header__right {
+    width: 40%;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .sidebar {

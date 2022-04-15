@@ -416,6 +416,22 @@ body {
   background-color: #3137c9;
 }
 
+.search {
+  width: 100%;
+  max-width: 21rem;
+  background-color: #202020;
+}
+
+.search__input {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  color: #ffffff;
+}
+.search__input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .header {
   display: flex;
   width: calc(100% - 300px);
