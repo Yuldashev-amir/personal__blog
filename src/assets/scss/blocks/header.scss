@@ -1,4 +1,5 @@
 .header {
+    display: flex;
     width: calc(100% - #{$sidebar-width});
     height: 30px;
     background-color: #444;
@@ -7,4 +8,13 @@
     top: 0;
     right: 0;
     z-index: $z-index-header;
+}
+
+.header__left {
+    width: 60%;
+}
+
+.header__right {
+    width: 40%;
+    display: flex;
 }
