@@ -416,6 +416,39 @@ body {
     background-color: #3137c9;
 }
 
+.search {
+    width: 100%;
+    max-width: 21rem;
+    background-color: #202020;
+}
+
+.search__input {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    color: #ffffff;
+}
+
+.search__input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search__input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search__input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search__input::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search__input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
 .header {
     display: -ms-flexbox;
     display: flex;
