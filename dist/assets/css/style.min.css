@@ -382,6 +382,18 @@ body {
 }
 
 /* blocks */
+.stories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-template-rows: 195px;
+}
+
+.stories__item {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 .subnav {
   display: none;
   width: 16.5rem;
