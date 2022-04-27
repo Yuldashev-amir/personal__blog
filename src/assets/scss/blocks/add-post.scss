@@ -1,0 +1,44 @@
+.add-post {
+    margin-bottom: 3rem;
+
+    box-shadow: 0 15px 25px rgba($black,  0.45);
+    background-color: $secondary;
+    border-radius: 5px;
+    padding: 1.5rem 2.2rem;
+
+}
+
+.add-post__form {
+    display: flex;
+}
+
+.add-post__textarea {
+    width: 70%;
+    border: none;
+    background-color: $black;
+    resize: none;
+
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: $white;
+
+    &::placeholder {
+        color: $black;
+    }
+}
+
+.add-post__file {
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+
+    border-radius: 50%;
+
+
+    background: #EBEBEB url("/src/assets/images/photo\ btn.svg") center no-repeat;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+}

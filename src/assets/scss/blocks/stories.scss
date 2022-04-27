@@ -3,6 +3,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 15px;
     grid-template-rows: 195px;
+
+    padding-top: 100px;
+    margin-bottom: 3rem;
 }
 
 
@@ -11,7 +14,7 @@
 
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba($color: $black,  0.2);
+    box-shadow: 0 5px 15px rgba($black,  0.2);
     cursor: pointer;
 
     &::after {
@@ -28,6 +31,13 @@
         left: 0;
         z-index: 2;
     }
+
+    &:hover {
+        .stories__preview {
+            transform: scale(1.05);
+            transition-duration: 5s;
+        }
+    }
 }
 
 .stories__preview {
@@ -40,9 +50,12 @@
     top: 0;
     left: 0;
     z-index: 1;
+
+    transition: transform 1s ease-in-out;
 }
 
-.stories__title {
+.stories__title,
+.stories__date {
     width: 100%;
     padding: 1.4rem;
 
@@ -51,7 +64,17 @@
     color: $white;
 
     position: absolute;
-    top: 0;
     left: 0;
     z-index: 3;
+}
+
+.stories__title {
+    top: 0;
+}
+
+
+.stories__date {
+    text-align: right;
+
+    bottom: 0;
 }
