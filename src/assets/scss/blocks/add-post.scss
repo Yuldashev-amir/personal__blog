@@ -28,18 +28,16 @@
     }
 }
 
-.add-post__file{
+.add-post__file {
     display: block;
     width: 4.4rem;
     height: 4.4rem;
 
-    border-radius: 70%;
+    border-radius: 50%;
 
-    background-color: #EBEBEB;
-    background-image: url("/src/assets/images/add-photo.svg") center no-repeat;
-    cursor: pointer;
+    background: #EBEBEB url("/dist/assets/images/photo\ 1\ \(1\).svg") center no-repeat;
 
-    .input {
+    input {
         display: none;
     }
 }
