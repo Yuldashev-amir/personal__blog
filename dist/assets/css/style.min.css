@@ -397,25 +397,26 @@ body {
 .add-post__textarea {
   width: 70%;
   border: none;
-  background-color: #000000;
+  background: transparent;
   resize: none;
   font-family: inherit;
   font-size: 1.5rem;
   color: #ffffff;
 }
 .add-post__textarea::placeholder {
-  color: #000000;
+  color: #d2d2d2;
 }
 
 .add-post__file {
   display: block;
   width: 4.4rem;
   height: 4.4rem;
-  border-radius: 50%;
-  background: #EBEBEB url("/src/assets/images/photo btn.svg") center no-repeat;
+  border-radius: 70%;
+  background-color: #EBEBEB;
+  background-image: url("/src/assets/images/photo btn.svg") center no-repeat;
   cursor: pointer;
 }
-.add-post__file input {
+.add-post__file .input {
   display: none;
 }
 
