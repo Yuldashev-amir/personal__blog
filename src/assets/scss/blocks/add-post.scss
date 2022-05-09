@@ -9,8 +9,10 @@
 
 }
 
-.add-post__form {
+.add-post__form-actions {
+    width: 20%;
     display: flex;
+    justify-content: flex-end;
 }
 
 .add-post__textarea {
@@ -35,9 +37,22 @@
 
     border-radius: 50%;
 
-    background: #EBEBEB url("/dist/assets/images/photo\ 1\ \(1\).svg") center no-repeat;
+    background: #EBEBEB url("/dist/assets/images/photo.svg") center no-repeat;
 
     input {
         display: none;
     }
+}
+
+.add-post__send {
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+
+    border-radius: 50%;
+
+    input {
+        display: none;
+    }
+
 }
