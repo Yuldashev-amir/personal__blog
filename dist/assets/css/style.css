@@ -429,11 +429,19 @@ body {
     width: 4.4rem;
     height: 4.4rem;
     border-radius: 50%;
-    background: #EBEBEB url("/dist/assets/images/photo.svg") center no-repeat;
+    background: #EBEBEB;
+    background-image: url("../images/photo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .add-post__file input {
     display: none;
+}
+
+.add-post__file:hover {
+    background-color: #fff;
 }
 
 .add-post__send {
@@ -441,6 +449,7 @@ body {
     width: 4.4rem;
     height: 4.4rem;
     border-radius: 50%;
+    background-color: blue;
 }
 
 .add-post__send input {
