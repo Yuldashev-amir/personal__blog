@@ -37,10 +37,19 @@
 
     border-radius: 50%;
 
-    background: #EBEBEB url("/dist/assets/images/photo.svg") center no-repeat;
+    background: #EBEBEB;
+    background-image: url("../images/photo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 
     input {
         display: none;
+    }
+
+
+    &:hover {
+        background-color: #fff;
     }
 }
 
@@ -50,6 +59,8 @@
     height: 4.4rem;
 
     border-radius: 50%;
+
+    background-color: blue;
 
     input {
         display: none;
