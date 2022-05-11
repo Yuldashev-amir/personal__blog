@@ -386,6 +386,11 @@ body {
     border-radius: 5px;
 }
 
+.add-post__form {
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .add-post__form-actions {
     width: 20%;
     display: -ms-flexbox;
@@ -395,33 +400,34 @@ body {
 }
 
 .add-post__textarea {
-    width: 70%;
+    width: 80%;
     border: none;
     background: transparent;
     resize: none;
+    height: 26px;
     font-family: inherit;
     font-size: 1.5rem;
     color: #ffffff;
 }
 
 .add-post__textarea::-webkit-input-placeholder {
-    color: #d2d2d2;
+    color: #ccc;
 }
 
 .add-post__textarea::-moz-placeholder {
-    color: #d2d2d2;
+    color: #ccc;
 }
 
 .add-post__textarea:-ms-input-placeholder {
-    color: #d2d2d2;
+    color: #ccc;
 }
 
 .add-post__textarea::-ms-input-placeholder {
-    color: #d2d2d2;
+    color: #ccc;
 }
 
 .add-post__textarea::placeholder {
-    color: #d2d2d2;
+    color: #ccc;
 }
 
 .add-post__file {
@@ -434,6 +440,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    border: none;
+    transition: background 2s linear;
 }
 
 .add-post__file input {
@@ -441,7 +449,7 @@ body {
 }
 
 .add-post__file:hover {
-    background-color: #fff;
+    background-color: #dedede;
 }
 
 .add-post__send {
@@ -449,11 +457,19 @@ body {
     width: 4.4rem;
     height: 4.4rem;
     border-radius: 50%;
+    border: none;
+    margin-left: 1.5rem;
     background-color: blue;
+    transition: background 2s linear;
+    cursor: pointer;
 }
 
 .add-post__send input {
     display: none;
+}
+
+.add-post__send:hover {
+    background-color: #0000e6;
 }
 
 .stories {
