@@ -1,0 +1,44 @@
+.related {
+    padding: 3rem 0 0.5rem;
+
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.related__title {
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+
+    margin-bottom: 2rem;
+}
+
+.related__list {
+    display: flex;
+
+}
+
+.related__list-item {
+    width: 50%;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+
+}
+
+
+.related__list-title {
+    font-size: 1.4rem;
+    color: #F3EBA2;
+    font-weight: 500;
+
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

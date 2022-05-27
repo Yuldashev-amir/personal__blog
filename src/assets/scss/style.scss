@@ -17,12 +17,26 @@ body {
 *::after {
     box-sizing: border-box;
 }
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+
+
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
 /* blocks */
 @import "blocks/post";
 @import "blocks/add-post";
 @import "blocks/stories";
 @import "blocks/pagination";
 @import "blocks/subnav";
+@import "blocks/related";
 @import "blocks/embed";
 @import "blocks/social";
 @import "blocks/page";
