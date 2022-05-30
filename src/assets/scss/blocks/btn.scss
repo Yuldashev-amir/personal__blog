@@ -37,4 +37,9 @@
             background-color: $blue;
         }
     }
+
+    &--rounded {
+        border-radius: 0.41em;
+        margin-top: 1rem;
+    }
 }

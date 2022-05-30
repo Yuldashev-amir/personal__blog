@@ -11,16 +11,20 @@
     line-height: 1.3rem;
 
     margin-bottom: 2rem;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .related__list {
     display: flex;
+    flex-wrap: wrap;
 
 }
 
 .related__list-item {
     width: 50%;
-    flex-wrap: wrap;
     margin-bottom: 2.5rem;
 
 }
@@ -41,4 +45,11 @@
     &:hover {
         text-decoration: underline;
     }
+}
+
+
+.related__list-data {
+    color: #828282;
+    font-size: 1.2rem;
+
 }
