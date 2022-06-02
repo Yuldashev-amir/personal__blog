@@ -40,6 +40,16 @@
     &--mb0 {
         margin-bottom: 0;
     }
+
+}
+
+.post__subtitle {
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 .post__text {

@@ -62,7 +62,7 @@
                     </li>
                 </ul>
             </nav>
-            <form class="search" action="/" method="post">
+            <form class="search" action="search.html" method="get">
                 <input class="search__input" type="text">
             </form>
         </div>
@@ -107,7 +107,7 @@
             </div><!------ /Profile-->
         </div><!------ /sidebar__content------>
         <div class="sidebar__footer">
-            <a class="btn btn--red" href="">Мои работы</a>
+            <a class="btn btn--red" href="works.html">Мои работы</a>
             <button class="btn btn--blue" type="button">Написать мне</button>
         </div>
     </aside>
@@ -181,7 +181,7 @@
                     </div> <!----/ POst text--->
             
                     <div class="related">
-                        <h3 class="related__title">Интересно почитать</h3>
+                        <h3 class="post__subtitle">Интересно почитать</h3>
             
                         <ul class="related__list">
                             <li class="related__list-item">
@@ -227,7 +227,7 @@
                     </a>
                     </div><!--- Post__footer---->
             
-                    <h3 class="comments__title">Обсуждение</h3>
+                    <h3 class="post__subtitle">Обсуждение</h3>
                     <form class="form" action="/" method="post">
                         <div class="form__group">
                         <textarea class="form__control form__control--textarea" name="comment-text" placeholder="текст комментария"></textarea>
@@ -235,6 +235,39 @@
                             </div>
                         <button class="btn btn--blue btn--rounded" type="submit">Отправить</button>
                     </form>
+            
+            
+                    <ul class="comments">
+                        <li class="comments__item">
+                            <div class="comments__header">
+                                <img class="comments__avatar" src="../src/assets/images/Comments-avatar.jpg" alt="">
+            
+                                <div class="comments__author">
+                            <div class="comments__name">
+                                Дмитрий Валак
+                            </div>
+                            <time class="comments__pubdate">1 неделю назад</time>
+                                </div>
+                            </div>
+                            <div class="comments__text">Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</div>
+                            <button type="button" class="comments__reply">ответить</button>
+                        </li>
+                        <ul class="comments">
+                            <li class="comments__item">
+                                <div class="comments__header">
+                                    <img class="comments__avatar" src="../src/assets/images/Comments-avatar.jpg" alt="">
+            
+                                    <div class="comments__author">
+                                <div class="comments__name">
+                                    Дмитрий Валак
+                                </div>
+                                <time class="comments__pubdate">1 неделю назад</time>
+                                    </div>
+                                </div>
+                                <div class="comments__text">Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</div>
+                                <button type="button" class="comments__reply">ответить</button>
+                            </li>
+                    </ul> <!--- /comments---->
             
                 </div> <!--- /Post__content---->
             </article> <!--- /Post---->
