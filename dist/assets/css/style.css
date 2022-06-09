@@ -807,6 +807,11 @@ a:hover {
     text-align: center;
 }
 
+.form--auth {
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
 .form__group {
     margin-bottom: 1.5rem;
 }
@@ -864,6 +869,62 @@ a:hover {
     bottom: 0;
     z-index: 1;
     transition: width 0.2s linear;
+}
+
+.form__footer--center {
+    text-align: center;
+}
+
+.form__footer--list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.form__footer--list li {
+    margin: 0 0.5rem;
+}
+
+.form__footer--list a {
+    color: #ffffff;
+}
+
+.cabinet {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cabinet__form {
+    width: 340px;
+}
+
+.cabinet__avatar {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 11rem;
+}
+
+.cabinet__avatar img {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.cabinet__file {
+    font-size: 1.4rem;
+    color: #3137c9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cabinet__file input {
+    display: none;
+}
+
+.cabinet__file:hover {
+    text-decoration: none;
 }
 
 .pagination {
@@ -1083,12 +1144,23 @@ a:hover {
 
 .page {
     overflow: hidden;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .page__title {
     font-size: 2.1rem;
     color: #ffffff;
     margin-bottom: 3rem;
+}
+
+.page__title--center {
+    text-align: center;
 }
 
 .nav__list {

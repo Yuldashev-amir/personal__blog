@@ -375,6 +375,9 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 *,
 *::before *::after {
@@ -610,6 +613,61 @@ a:hover {
 }
 .add-post__send:hover {
   background-color: #0000e6;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.modal__content {
+  max-width: 500px;
+  padding: 8rem 8rem 2.5rem;
+  position: relative;
+  background-color: #202020;
+  border-radius: 5px;
+}
+.modal__content--contact {
+  padding-bottom: 2.5rem;
+}
+
+.modal__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+.modal__close:hover {
+  transform: rotate(90deg);
+}
+
+.modal__footer {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  margin-top: 4rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.modal__footer li {
+  margin: 0 0.5rem;
+}
+.modal__footer a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .work {
