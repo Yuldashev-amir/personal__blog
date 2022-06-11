@@ -11,16 +11,43 @@
 
     box-shadow: 5px 0 15px
     rgba(#050505, 1.0);
+
+    @include breakpoint($tablet-bp) {
+        display: flex;
+        flex-direction: column;
+        top: 4rem;
+        height: calc(100vh - 4rem);
+        overflow: auto;
+
+        padding-bottom: 1.5rem;
+
+        transform: translateX(-100%);
+        transition: transform 0.2s linear;
+
+        .show__sidebar & {
+            display: block;
+            transform: translateX(0);
+        }
+    }
+
 }
 
 .sidebar__header {
     height: 180px;
     background-color: $secondary;
+
+    @include breakpoint($tablet-bp) {
+        height: 10rem;
+    }
 }
 
 .sidebar__content {
     padding: 0 2rem;
     margin-top: -5rem;
+
+    @include breakpoint($tablet-bp) {
+        flex-grow: 1;
+    }
 }
 
 .sidebar__footer {

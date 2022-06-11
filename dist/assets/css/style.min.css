@@ -555,8 +555,9 @@ a:hover {
 }
 
 .add-post__form-actions {
-  width: 20%;
+  max-width: 120px;
   display: flex;
+  flex-shrink: 0;
   justify-content: flex-end;
 }
 
@@ -569,6 +570,8 @@ a:hover {
   font-family: inherit;
   font-size: 1.5rem;
   color: #ffffff;
+  overflow: hidden;
+  flex-grow: 1;
 }
 .add-post__textarea::placeholder {
   color: #ccc;
@@ -716,6 +719,62 @@ a:hover {
 .work__footer {
   margin-top: auto;
   text-align: right;
+}
+
+.burger {
+  display: none;
+  width: 3rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0;
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+.burger:before, .burger::after,
+.burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+}
+.burger:before, .burger::after {
+  content: "";
+  transition: transform 0.2s linear;
+}
+.burger::before {
+  top: 0;
+}
+.burger::after {
+  bottom: 0;
+}
+.burger span {
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.2s linear;
+}
+.burger.show__sidebar .burger span {
+  opacity: 0;
+}
+.burger.show__sidebar .burger:before, .burger.show__sidebar .burger::after {
+  top: 50%;
+}
+.burger.show__sidebar .burger::before {
+  transform: rotate(45deg);
+}
+.burger.show__sidebar .burger::after {
+  transform: rotate(-45deg);
+}
+@media (max-width: 991px) {
+  .burger {
+    display: block;
+  }
 }
 
 .stories {
@@ -992,6 +1051,15 @@ a:hover {
   top: 100%;
   left: 0;
 }
+@media (max-width: 991px) {
+  .subnav {
+    position: static;
+    width: 100%;
+    background-color: none;
+    box-shadow: none;
+    padding-left: 2rem;
+  }
+}
 
 .subnav__link {
   padding: 0.45rem 1.2rem;
@@ -1003,6 +1071,13 @@ a:hover {
 .subnav__link:hover {
   text-decoration: none;
   background-color: #2c31b4;
+}
+@media (max-width: 991px) {
+  .subnav__link {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.5rem;
+  }
 }
 
 .related {
@@ -1081,6 +1156,11 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 991px) {
+  .social {
+    display: none;
+  }
+}
 
 .social__item {
   margin: 0 0.75rem;
@@ -1097,6 +1177,22 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 991px) {
+  .page.show__sidebar {
+    position: relative;
+  }
+  .page.show__sidebar:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+}
 
 .page__title {
   font-size: 2.1rem;
@@ -1107,8 +1203,23 @@ a:hover {
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  .nav {
+    display: none;
+  }
+}
+.nav--mobile {
+  display: block;
+  margin: 3rem 0;
+}
+
 .nav__list {
   display: flex;
+}
+@media (max-width: 991px) {
+  .nav__list {
+    flex-direction: column;
+  }
 }
 
 .nav__item {
@@ -1119,6 +1230,11 @@ a:hover {
 }
 .nav__item:hover > .subnav {
   display: block;
+}
+@media (max-width: 991px) {
+  .nav__item:hover {
+    background: none;
+  }
 }
 
 .nav__link {
@@ -1145,6 +1261,16 @@ a:hover {
   top: 50%;
   right: 1.35rem;
   transform: translateY(-50%);
+}
+@media (max-width: 991px) {
+  .nav__link {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.6rem;
+  }
+  .nav__link:hover {
+    background: none;
+  }
 }
 
 .search {
@@ -1174,15 +1300,31 @@ a:hover {
   right: 0;
   z-index: 1000;
 }
+@media (max-width: 991px) {
+  .header {
+    width: 100%;
+  }
+}
 
 .header__left {
   width: 60%;
+}
+@media (max-width: 991px) {
+  .header__left {
+    width: 40%;
+    display: block;
+  }
 }
 
 .header__right {
   width: 40%;
   display: flex;
   justify-content: flex-end;
+}
+@media (max-width: 991px) {
+  .header__right {
+    width: 60%;
+  }
 }
 
 .sidebar {
@@ -1195,15 +1337,41 @@ a:hover {
   z-index: 1000;
   box-shadow: 5px 0 15px #050505;
 }
+@media (max-width: 991px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    overflow: auto;
+    padding-bottom: 1.5rem;
+    transform: translateX(-100%);
+    transition: transform 0.2s linear;
+  }
+  .show__sidebar .sidebar {
+    display: block;
+    transform: translateX(0);
+  }
+}
 
 .sidebar__header {
   height: 180px;
   background-color: #121212;
 }
+@media (max-width: 991px) {
+  .sidebar__header {
+    height: 10rem;
+  }
+}
 
 .sidebar__content {
   padding: 0 2rem;
   margin-top: -5rem;
+}
+@media (max-width: 991px) {
+  .sidebar__content {
+    flex-grow: 1;
+  }
 }
 
 .sidebar__footer {
@@ -1215,12 +1383,33 @@ a:hover {
 .main {
   padding: 10rem 0 8rem 300px;
 }
+@media (max-width: 991px) {
+  .main {
+    padding: 0;
+  }
+}
 
 .container {
   max-width: 70rem;
   margin: 0 auto;
   padding-left: 5rem;
   padding-right: 5rem;
+}
+@media (max-width: 700px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.profile {
+  margin-top: -5rem;
+}
+@media (max-width: 991px) {
+  .profile {
+    margin-top: -1rem;
+    position: relative;
+  }
 }
 
 .profile__avatar {
@@ -1233,10 +1422,36 @@ a:hover {
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
 }
+@media (max-width: 991px) {
+  .profile__avatar {
+    width: 6.5rem;
+    height: 6.5rem;
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.profile__header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .profile__header {
+    text-align: left;
+    padding-left: 8rem;
+    padding-top: 4rem;
+  }
+}
 
 .profile__name {
   font-size: 1.8rem;
   text-align: center;
+}
+@media (max-width: 700px) {
+  .profile__name {
+    font-size: 1.5rem;
+  }
 }
 
 .profile__prof {
@@ -1246,6 +1461,11 @@ a:hover {
   color: #dedede;
   text-align: center;
 }
+@media (max-width: 700px) {
+  .profile__prof {
+    font-size: 1.2rem;
+  }
+}
 
 .profile__text {
   padding: 3rem 0;
@@ -1254,6 +1474,11 @@ a:hover {
   text-align: center;
   border-top: 1px solid #1c1c1c;
   border-bottom: 1px solid #1c1c1c;
+}
+@media (max-width: 991px) {
+  .profile__text {
+    display: none;
+  }
 }
 
 .btn {

@@ -1,5 +1,7 @@
 @import "vars.scss";
+@import "mixins";
 @import "vendor/reset.scss";
+
 
 
 html {
@@ -39,6 +41,7 @@ a {
 @import "blocks/add-post";
 @import "blocks/modal-contact";
 @import "blocks/work";
+@import "blocks/burger";
 @import "blocks/stories";
 @import "blocks/tags";
 @import "blocks/form";
