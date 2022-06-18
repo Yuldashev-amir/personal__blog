@@ -52,6 +52,11 @@
         position: relative;
         padding-right: 3.5rem;
         margin-top: -2px;
+        display: none;
+
+        @include breakpoint($tablet-bp) {
+            display: block;
+        }
 
         &::after {
             content: "";

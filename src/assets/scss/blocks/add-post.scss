@@ -6,6 +6,10 @@
     background-color: $secondary;
     border-radius: 5px;
 
+    @include breakpoint($mobile-bp) {
+        padding: 1.5rem;
+    }
+
 
 }
 
@@ -14,10 +18,14 @@
 }
 
 .add-post__form-actions {
-    max-width: 120px;
+    width: 12rem;
     display: flex;
     flex-shrink: 0;
     justify-content: flex-end;
+
+    @include breakpoint($mobile-bp) {
+        width: 9rem;
+    }
 }
 
 .add-post__textarea {
@@ -67,6 +75,12 @@
     &:hover {
         background-color: darken(#EBEBEB, 5%);
     }
+
+    @include breakpoint($mobile-bp) {
+        width: 3.4rem;
+        height: 3.4rem;
+        background-size: 20;
+    }
 }
 
 .add-post__send {
@@ -91,6 +105,11 @@
 
     &:hover {
         background-color: darken(blue, 5%);
+    }
+
+    @include breakpoint($mobile-bp) {
+        width: 3.4rem;
+        height: 3.4rem;
     }
 
 }

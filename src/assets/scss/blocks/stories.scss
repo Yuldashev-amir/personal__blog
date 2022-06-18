@@ -6,6 +6,11 @@
 
     padding-top: 100px;
     margin-bottom: 3rem;
+
+    @include breakpoint($tablet-bp) {
+        grid-template-columns: 140px 140px 140px 140px;
+        overflow: auto;
+    }
 }
 
 

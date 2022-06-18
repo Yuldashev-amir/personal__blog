@@ -12,6 +12,7 @@
     left: 0;
 
     @include breakpoint($tablet-bp) {
+        display: block;
         position: static;
         width: 100%;
         background-color: none;

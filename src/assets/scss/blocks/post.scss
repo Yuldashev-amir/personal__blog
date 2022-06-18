@@ -8,6 +8,11 @@
     rgba($black, 0.35);
 
     border-radius: 5px;
+
+    @include breakpoint ($mobile-bp) {
+        padding: 1.5rem;
+
+    }
 }
 .post__header {
     margin: 0 0 2.5rem;
@@ -125,12 +130,23 @@
     justify-content: space-between;
     align-items: center;
 
+    @include breakpoint($mobile-bp) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
 
 .post__data {
     display: flex;
     color: #828282;
     line-height: 1.2;
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 1rem;
+
+        font-size: 1.2rem;
+    }
 
     a {
         color: inherit;
