@@ -79,7 +79,7 @@
     @include breakpoint($mobile-bp) {
         width: 3.4rem;
         height: 3.4rem;
-        background-size: 20;
+        background-size: 15px;
     }
 }
 
@@ -87,6 +87,7 @@
     display: block;
     width: 4.4rem;
     height: 4.4rem;
+    font-size: 0;
 
     border-radius: 50%;
     border: none;
@@ -94,6 +95,9 @@
     margin-left: 1.5rem;
 
     background-color: blue;
+    background-image: url("../images/send.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 
     transition: background 2s linear;
 
@@ -110,6 +114,7 @@
     @include breakpoint($mobile-bp) {
         width: 3.4rem;
         height: 3.4rem;
+        background-size: 15px;
     }
 
 }
