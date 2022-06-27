@@ -3,7 +3,7 @@
 <head>
     {{> head }}
 </head>
-<body class="show__sidebar">
+<body>
 
     <div class="page">
         <!-----Header-->
@@ -15,12 +15,16 @@
         <!-----Main-->
     <main class="main">
        <div class="container">
-            {{> body }}
+        {{> body }}
        </div>
     </main>
 </div>
 
+{{> contact-modal }}
+{{> share-modal }}
+{{> story-modal }}
+
         <!-----JS-->
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>
