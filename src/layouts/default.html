@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" lang="ru">
+<html lang="ru">
 <head>
     {{> head }}
 </head>
 <body>
 
-    <div class="page">
-        <!-----Header-->
-    {{> header }}
+    <div class="page" id="page">
+        <!-- Header -->
+        {{> header }}
 
-        <!-----sidebar-->
-    {{> sidebar }}
+        <!-- Sidebar -->
+        {{> sidebar }}
 
-        <!-----Main-->
-    <main class="main">
-       <div class="container">
-        {{> body }}
-       </div>
-    </main>
-</div>
+        <!-- Main -->
+        <main class="main">
+            <div class="container">
+                {{> body }}
+            </div>
+        </main>
+    </div>
 
-{{> contact-modal }}
-{{> share-modal }}
-{{> story-modal }}
 
-        <!-----JS-->
-    <script src="assets/js/modal.js"></script>
-  </body>
+    {{> story-modal }}
+    {{> contact-modal }}
+    {{> share-modal }}
+    
+    
+
+    <!-- JS -->
+    <script src="assets/js/app.js"></script>
+</body>
 </html>
