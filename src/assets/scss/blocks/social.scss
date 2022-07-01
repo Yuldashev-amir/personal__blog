@@ -1,17 +1,12 @@
 .social {
     display: flex;
     justify-content: center;
-
-
+    
     @include breakpoint($tablet-bp) {
         display: none;
     }
 }
 
 .social__item {
-    margin: 0 0.75rem;
-}
-
-.social__link {
-    border: none;
+    margin: 0 .75rem;
 }

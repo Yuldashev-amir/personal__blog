@@ -6,11 +6,12 @@ const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require('gulp-strip-css-comments');
 const rename = require("gulp-rename");
-const sass = require("gulp-sass")(require("sass"));
+const sass = require("gulp-sass");
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
 const panini = require("panini");
+const imagemin = require("gulp-imagemin");
 const del = require("del");
 const notify = require("gulp-notify");
 const webpack = require('webpack');
@@ -151,6 +152,18 @@ function js(cb) {
           mode: "production",
           output: {
             filename: 'app.js',
+          },
+          module: {
+            rules: [
+              {
+                test: /\.(js)$/,
+                exclude: /(node_modules)/,
+                loader: 'babel-loader',
+                query: {
+                  presets: ['@babel/preset-env']
+                }
+              }
+            ]
           }
         }))
         .pipe(dest(path.build.js))
@@ -184,6 +197,17 @@ function jsWatch(cb) {
 
 function images(cb) {
     return src(path.src.images)
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 95, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
         .pipe(dest(path.build.images))
         .pipe(browserSync.reload({stream: true}));
 

@@ -1,49 +1,51 @@
 .btn {
     display: inline-block;
     vertical-align: top;
-    padding: 1.1em 2.1em;
+    padding: 1.12em 2.1em;
 
-    background-color: $secondary;
+    background: $secondary;
     border: none;
     cursor: pointer;
     border-radius: 3em;
 
-    font-size: 1.2rem;
-    font-weight: 500;
     font-family: inherit;
+    font-size: 1.2rem;
     line-height: 1.1;
+    font-weight: 500;
     color: $white;
     text-decoration: none;
-    transition: background-color 0.2s linear;
+
+    transition: background-color .2s linear;
 
     &:hover {
         text-decoration: none;
     }
 
-
     &--red {
         background-color: $red;
-        box-shadow: 0 7px 17px -10px
-        rgba($red, 0.3);
+        box-shadow: 0 7px 17px -10px rgba($red, .3);
 
-        &:hover {
-            background-color: $red;
+        &:hover,
+        &:focus {
+            background-color: darken($red, 5%);
         }
     }
 
     &--blue {
         background-color: $blue;
-        box-shadow: 0 7px 17px -10px
-        rgba($blue, 0.3);
+        box-shadow: 0 7px 17px -10px rgba($blue, .3);
 
-
-        &:hover {
-            background-color: $blue;
+        &:hover,
+        &:focus {
+            background-color: darken($blue, 5%);
         }
     }
 
     &--rounded {
         border-radius: 0.41em;
-        margin-top: 1rem;
+    }
+
+    &--sm {
+        padding: 0.7em 1.25em;
     }
 }

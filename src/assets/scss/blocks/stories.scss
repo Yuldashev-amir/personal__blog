@@ -1,35 +1,36 @@
 .stories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 15px;
+    grid-column-gap: 13px;
     grid-template-rows: 195px;
-
-    padding-top: 100px;
     margin-bottom: 3rem;
-
-    @include breakpoint($tablet-bp) {
+    
+    @include breakpoint($mobile-bp) {
         grid-template-columns: 140px 140px 140px 140px;
         overflow: auto;
     }
 }
 
-
 .stories__item {
+    overflow: hidden;
     position: relative;
 
     border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba($black,  0.2);
+    box-shadow: 0 5px 15px rgba($black, .2);
     cursor: pointer;
 
-    &::after {
+    &:after {
         content: "";
         display: block;
         width: 100%;
         height: 100%;
 
-        background-image: linear-gradient(to bottom, rgba($black, 0.8), rgba($black, 0) 50%,
-        rgba($black, 0.8));
+        background-image: linear-gradient(
+            to bottom,
+            rgba($black, .8),
+            rgba($black, 0) 50%,
+            rgba($black, .8)
+        );
 
         position: absolute;
         top: 0;
@@ -39,7 +40,7 @@
 
     &:hover {
         .stories__preview {
-            transform: scale(1.05);
+            transform: scale(1.3);
             transition-duration: 5s;
         }
     }
@@ -56,6 +57,7 @@
     left: 0;
     z-index: 1;
 
+    transform: scale(1.05);
     transition: transform 1s ease-in-out;
 }
 
@@ -65,7 +67,7 @@
     padding: 1.4rem;
 
     font-size: 1.2rem;
-    line-height: 1.3rem;
+    line-height: 1.3;
     color: $white;
 
     position: absolute;
@@ -77,9 +79,14 @@
     top: 0;
 }
 
-
 .stories__date {
-    text-align: right;
-
     bottom: 0;
+
+    text-align: right;
 }
+
+
+
+
+
+

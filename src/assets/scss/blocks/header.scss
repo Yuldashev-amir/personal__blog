@@ -1,16 +1,15 @@
 .header {
     display: flex;
     width: calc(100% - #{$sidebar-width});
-    height: 30px;
-    background-color: #0d0d0d;
-    box-shadow: 0  5px 22px rgba($black, 0.25);
+
+    background-color: #0D0D0D;
+    box-shadow: 0 5px 22px rgba($black, .25);
 
     position: fixed;
     top: 0;
     right: 0;
     z-index: $z-index-header;
-
-
+    
     @include breakpoint($tablet-bp) {
         width: 100%;
     }
@@ -18,10 +17,9 @@
 
 .header__left {
     width: 60%;
-
+    
     @include breakpoint($tablet-bp) {
         width: 40%;
-        display: block;
     }
 }
 
@@ -29,7 +27,7 @@
     width: 40%;
     display: flex;
     justify-content: flex-end;
-
+    
     @include breakpoint($tablet-bp) {
         width: 60%;
     }
