@@ -48,7 +48,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
+    content: "";
     content: none;
 }
 
@@ -114,11 +114,11 @@ audio:not([controls]) {
  */
 html {
     font-size: 100%;
-  /* 1 */
+ /* 1 */
     -webkit-text-size-adjust: 100%;
-  /* 2 */
+ /* 2 */
     -ms-text-size-adjust: 100%;
-  /* 2 */
+ /* 2 */
 }
 
 /**
@@ -142,9 +142,9 @@ a:hover {
  */
 img {
     border: 0;
-  /* 1 */
+ /* 1 */
     -ms-interpolation-mode: bicubic;
-  /* 2 */
+ /* 2 */
 }
 
 /**
@@ -177,12 +177,12 @@ fieldset {
  */
 legend {
     border: 0;
-  /* 1 */
+ /* 1 */
     padding: 0;
     white-space: normal;
-  /* 2 */
+ /* 2 */
     *margin-left: -7px;
-  /* 3 */
+ /* 3 */
 }
 
 /**
@@ -196,13 +196,13 @@ input,
 select,
 textarea {
     font-size: 100%;
-  /* 1 */
+ /* 1 */
     margin: 0;
-  /* 2 */
+ /* 2 */
     vertical-align: baseline;
-  /* 3 */
+ /* 3 */
     *vertical-align: middle;
-  /* 3 */
+ /* 3 */
 }
 
 /**
@@ -235,15 +235,15 @@ select {
  *    Known issue: inner spacing remains in IE 6.
  */
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type=button],
+input[type=reset],
+input[type=submit] {
     -webkit-appearance: button;
-  /* 2 */
+ /* 2 */
     cursor: pointer;
-  /* 3 */
+ /* 3 */
     *overflow: visible;
-  /* 4 */
+ /* 4 */
 }
 
 /**
@@ -260,16 +260,16 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-input[type="checkbox"],
-input[type="radio"] {
+input[type=checkbox],
+input[type=radio] {
     box-sizing: border-box;
-  /* 1 */
+ /* 1 */
     padding: 0;
-  /* 2 */
+ /* 2 */
     *height: 13px;
-  /* 3 */
+ /* 3 */
     *width: 13px;
-  /* 3 */
+ /* 3 */
 }
 
 /**
@@ -277,10 +277,9 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type="search"] {
+input[type=search] {
     -webkit-appearance: textfield;
-  /* 1 */
-  /* 2 */
+ /* 1 */ /* 2 */
     box-sizing: content-box;
 }
 
@@ -288,8 +287,8 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -308,9 +307,9 @@ input::-moz-focus-inner {
  */
 textarea {
     overflow: auto;
-  /* 1 */
+ /* 1 */
     vertical-align: top;
-  /* 2 */
+ /* 2 */
 }
 
 /**
@@ -372,8 +371,14 @@ body {
     color: #fff;
 }
 
-body.no-scroll, body.show-sidebar {
+body.no-scroll {
     overflow: hidden;
+}
+
+@media screen and (max-width: 991px) {
+    body.show-sidebar {
+        overflow: hidden;
+    }
 }
 
 *,
@@ -406,18 +411,6 @@ a:hover {
     .show-sidebar .page {
         position: relative;
     }
-
-    .show-sidebar .page:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-    }
 }
 
 .page__title {
@@ -428,6 +421,19 @@ a:hover {
 
 .page__title--center {
     text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+    .page__mask {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
 }
 
 .header {
@@ -489,7 +495,7 @@ a:hover {
 }
 
 .burger:before, .burger:after,
-  .burger span {
+.burger span {
     display: block;
     width: 100%;
     height: 2px;
@@ -500,9 +506,9 @@ a:hover {
 
 .burger:before, .burger:after {
     content: "";
-    transition: -webkit-transform .2s linear;
-    transition: transform .2s linear;
-    transition: transform .2s linear, -webkit-transform .2s linear;
+    transition: -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .burger:before {
@@ -517,7 +523,7 @@ a:hover {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    transition: opacity .2s linear;
+    transition: opacity 0.2s linear;
 }
 
 .show-sidebar .burger span {
@@ -598,7 +604,7 @@ a:hover {
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-    transition: background-color .2s linear;
+    transition: background-color 0.2s linear;
 }
 
 .nav__link.has-subnav {
@@ -631,7 +637,7 @@ a:hover {
 .subnav {
     display: none;
     width: 16.5rem;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     background-color: #3137C9;
     border-radius: 0 0 5px 5px;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
@@ -652,11 +658,11 @@ a:hover {
 
 .subnav__link {
     display: block;
-    padding: .45rem 1.2rem;
+    padding: 0.45rem 1.2rem;
     font-size: 1.2rem;
     color: #fff;
     text-decoration: none;
-    transition: background-color .2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .subnav__link:hover {
@@ -716,8 +722,8 @@ a:hover {
 @media screen and (max-width: 991px) {
     .search__input {
         height: 4rem;
-        padding-top: .9rem;
-        padding-bottom: .9rem;
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
         font-size: 1.6rem;
     }
 }
@@ -745,9 +751,9 @@ a:hover {
         top: 4rem;
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
-        transition: -webkit-transform .2s linear;
-        transition: transform .2s linear;
-        transition: transform .2s linear, -webkit-transform .2s linear;
+        transition: -webkit-transform 0.2s linear;
+        transition: transform 0.2s linear;
+        transition: transform 0.2s linear, -webkit-transform 0.2s linear;
     }
 
     .show-sidebar .sidebar {
@@ -915,7 +921,7 @@ a:hover {
 }
 
 .social__item {
-    margin: 0 .75rem;
+    margin: 0 0.75rem;
 }
 
 .btn {
@@ -932,7 +938,7 @@ a:hover {
     font-weight: 500;
     color: #fff;
     text-decoration: none;
-    transition: background-color .2s linear;
+    transition: background-color 0.2s linear;
 }
 
 .btn:hover {
@@ -1061,15 +1067,15 @@ a:hover {
 .add-post__form {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-flex-align: end;
+    align-items: flex-end;
 }
 
 .add-post__textarea {
     display: block;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    height: 26px;
+    height: 34px;
     overflow: hidden;
     border: none;
     background: transparent;
@@ -1123,12 +1129,12 @@ a:hover {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color .2s linear;
+    transition: background-color 0.2s linear;
 }
 
 @media screen and (max-width: 575px) {
     .add-post__file,
-    .add-post__send {
+.add-post__send {
         width: 3.4rem;
         height: 3.4rem;
     }
@@ -1220,7 +1226,7 @@ a:hover {
 }
 
 .post__title--open {
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
 }
 
 .post__subtitle {
@@ -1358,7 +1364,7 @@ a:hover {
 .post__actions a {
     color: inherit;
     opacity: 0.6;
-    transition: opacity .2s linear;
+    transition: opacity 0.2s linear;
 }
 
 .post__actions a:hover {
@@ -1366,7 +1372,7 @@ a:hover {
 }
 
 .post__actions-icon {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
 }
 
 .embed,
@@ -1377,20 +1383,20 @@ a:hover {
 }
 
 .embed:before,
-  .fr-video:before {
+.fr-video:before {
     content: "";
     display: block;
     padding-top: 56.25%;
 }
 
 .embed iframe,
-  .embed video,
-  .embed object,
-  .embed embed,
-  .fr-video iframe,
-  .fr-video video,
-  .fr-video object,
-  .fr-video embed {
+.embed video,
+.embed object,
+.embed embed,
+.fr-video iframe,
+.fr-video video,
+.fr-video object,
+.fr-video embed {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1414,7 +1420,7 @@ a:hover {
 }
 
 .pagination__item {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
 }
 
 .pagination__link {
@@ -1429,7 +1435,7 @@ a:hover {
     color: #fff;
     text-align: center;
     text-decoration: none;
-    transition: background-color .2s linear;
+    transition: background-color 0.2s linear;
 }
 
 .pagination__link:hover {
@@ -1442,7 +1448,7 @@ a:hover {
 }
 
 .related {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid #1C1C1C;
 }
 
@@ -1576,7 +1582,7 @@ a:hover {
 .form__control {
     display: block;
     width: 100%;
-    padding: .5rem 0 .75rem;
+    padding: 0.5rem 0 0.75rem;
     background: none;
     border: none;
     border-bottom: 1px solid #3F3F3F;
@@ -1612,7 +1618,7 @@ a:hover {
 }
 
 .form__control--textarea {
-    height: 30px;
+    height: 32px;
     overflow: hidden;
     resize: none;
 }
@@ -1625,7 +1631,7 @@ a:hover {
     left: 0;
     bottom: 0;
     z-index: 1;
-    transition: width .2s linear;
+    transition: width 0.2s linear;
 }
 
 .form__footer--center {
@@ -1642,7 +1648,7 @@ a:hover {
 }
 
 .form__footer-list li {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
 }
 
 .form__footer-list a {
@@ -1840,6 +1846,11 @@ a:hover {
     z-index: 1010;
 }
 
+.modal.show {
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .modal__content {
     width: 100%;
     max-width: 500px;
@@ -1847,10 +1858,27 @@ a:hover {
     position: relative;
     background-color: #202020;
     border-radius: 5px;
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    transition: opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+@media screen and (max-width: 991px) {
+    .modal__content {
+        padding: 5rem 3rem 3rem;
+    }
 }
 
 .modal__content--contact {
     padding-bottom: 2.5rem;
+}
+
+.modal__content--story {
+    padding: 0;
+    background: none;
 }
 
 .modal__close {
@@ -1858,13 +1886,13 @@ a:hover {
     background: none;
     border: none;
     cursor: pointer;
-    opacity: .5;
+    opacity: 0.5;
     position: absolute;
     top: 2rem;
     right: 2rem;
-    transition: opacity .2s linear, -webkit-transform .2s linear;
-    transition: transform .2s linear, opacity .2s linear;
-    transition: transform .2s linear, opacity .2s linear, -webkit-transform .2s linear;
+    transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear, opacity 0.2s linear;
+    transition: transform 0.2s linear, opacity 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .modal__close:hover {
@@ -1884,7 +1912,7 @@ a:hover {
 }
 
 .modal__footer li {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
 }
 
 .modal__footer a {
@@ -1894,4 +1922,9 @@ a:hover {
 
 .modal__footer a:hover {
     text-decoration: none;
+}
+
+.modal__video {
+    display: block;
+    margin: 0 auto;
 }
